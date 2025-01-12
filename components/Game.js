@@ -1,8 +1,8 @@
-// pages/index.js
+// components/Game.js
 import { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
-export default function Home() {
+const Game = () => {
   const [categories, setCategories] = useState({
     Equity: ['Stocks', 'Index Funds'],
     Debt: ['Bonds', 'Treasury Bills'],
@@ -45,8 +45,7 @@ export default function Home() {
   };
 
   return (
-    <div className="container">
-      <h1>Macroeconomic Asset Allocation</h1>
+    <div>
       <DragDropContext onDragEnd={handleDragEnd}>
         <div className="categories">
           {['Equity', 'Debt', 'RealEstate'].map((category) => (
@@ -86,4 +85,6 @@ export default function Home() {
       <p>{feedback}</p>
     </div>
   );
-}
+};
+
+export default Game;

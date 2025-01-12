@@ -1,5 +1,10 @@
-import "@/styles/globals.css";
+import Game from '../components/Game';
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+export default function Home() {
+  return (
+    <div className="container">
+      <h1>Macroeconomic Asset Allocation</h1>
+      <Game />
+    </div>
+  );
 }
